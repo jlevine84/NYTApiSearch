@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Giphy API</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>NY Times Search</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="nytSearch.js"></script>
+  <script src="javascript.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href= "style.css">
+  
 </head>
 <body>
-    <div class="col-12" id="heading">
-        <h1>New York Times Search</h1>
+    <div id="heading">
+        <h1><i class="fa fa-newspaper-o"></i>New York Times Search</h1>
     </div>
     <div id="searchParametersPane">
-        Search Parameters:<br>
-        Search Term:<br>
+
+
         <div id="searchTermBox">
-                <input type="text" name="searchTerm" id="searchTerm" placeholder="Topic"><br>
+                <label for="searchTerm"><b>Search for a Topic:</b><br></label>
+                <input type="text" name="searchTerm" class="form-control" id="searchTerm" placeholder="Topic" id="searched"><br>
         </div>
-        Number of records to retrieve:<br>
+
         <div id="numRecordsBox">
-                <input type="text" name="numberOfRecords" placeholder="Number"><br>
+                <label for="numberOfRecords"><b>Number of records to retrieve:</b><br></label>
+                <input type="text" name="numberOfRecords" class="form-control" id="numRecordBox" placeholder="Number of Records"><br>
         </div>
-        Start year (optional):<br>
+
         <div id="startYearBox">
-                <input type="text" name="startYear" placeholder="YYYYMMDD"><br>
+                <label for="startYear"><b>Start year (optional):</b><br></label>
+                <input type="text" name="startYear" class="form-control" id="starYear" placeholder="YYYYMMDD"><br>
         </div>
-        End year (optional):<br>
+
+
         <div id="endYearBox">
-                <input type="text" name="endYear" placeholder="YYYYMMDD"><br>
+                <label for="endYear"><b>End year (optional):</b><br></label>
+                <input type="text" name="endYear" class="form-control" id="endYear" placeholder="YYYYMMDD"><br>
         </div>
-        <button type="button" id="searchButton">Search</button>
-        <button type="button">Clear Results</button>
+
+        <div class="container" id="btncont">
+            <button type="button" id="searchButton"><i class='fa fa-search'></i> Search</button>
+            <button type="button" id="clearButton"><i class='fa fa-trash'></i> Clear Results</button>
+        </div>
     </div>
     <div id="topArticlesPane">
-        Top Articles: <br>
-        <div id="listOfArticles">
-        </div>
+        <b>Top Articles: </b><br>
+        <div id="listOfArticles"></div>
     </div>
+    <footer class="page-footer text-center font-small special-color-dark pt-4">
+        <div class="col col-12" id="footing">
+        <b>Made with lots and lots of ❤︎</b>
+        </div>
+    </footer>
   
 </body>
 </html>
