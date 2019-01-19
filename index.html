@@ -1,1 +1,43 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Giphy API</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="nytSearch.js"></script>
+</head>
+<body>
+    <div class="col-12" id="heading">
+        <h1>New York Times Search</h1>
+    </div>
+    <div id="searchParametersPane">
+        Search Parameters:<br>
+        Search Term:<br>
+        <div id="searchTermBox">
+                <input type="text" name="searchTerm" id="searchTerm" placeholder="Topic"><br>
+        </div>
+        Number of records to retrieve:<br>
+        <div id="numRecordsBox">
+                <input type="text" name="numberOfRecords" placeholder="Number"><br>
+        </div>
+        Start year (optional):<br>
+        <div id="startYearBox">
+                <input type="text" name="startYear" placeholder="YYYYMMDD"><br>
+        </div>
+        End year (optional):<br>
+        <div id="endYearBox">
+                <input type="text" name="endYear" placeholder="YYYYMMDD"><br>
+        </div>
+        <button type="button" id="searchButton">Search</button>
+        <button type="button">Clear Results</button>
+    </div>
+    <div id="topArticlesPane">
+        Top Articles: <br>
+        <div id="listOfArticles">
+        </div>
+    </div>
+  
+</body>
+</html>
