@@ -19,19 +19,15 @@ $(document).ready(function() {
         .then(function(response){
             console.log(response);
         
-        for (var i = 0; i < recordsDisplayed; i++) {
-            var articleDiv = $("<div>").addClass("article");
-            var headlineel = $("<h2>");
-            headlineel.text(response.response.doc[i].headline.main);
-            var abstractel = $("<p>");
-            abstractel.text(response.response.doc[i].abstract);
-            var linkel = $("<a>");
-            linkel.attr("href", response.response.doc[i].web_url).text(response.response.doc[i].web_url);
-            articleDiv.append(headlineel, abstractel, linkel);
-            $("#listOfArticles").append(articleDiv);
-        }
+            for (var i = 0; i < recordsDisplayed; i++) {
+                var articleDiv = $("<div>").addClass("article");
+                var headlineel = $("<h5>").text(response.response.docs[i].headline.main);
+                var abstractel = $("<p>").text(response.response.docs[i].abstract);
+                var linkel = $("<a>").attr("href", response.response.docs[i].web_url).text(response.response.docs[i].web_url);
+                articleDiv.append(headlineel, abstractel, linkel);
+                $("#listOfArticles").append(articleDiv);
+            }
             
-
         });      
     });
 });
